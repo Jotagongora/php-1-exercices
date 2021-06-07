@@ -72,3 +72,34 @@ function filterAge(array $people, int $age): array {
     return $newArray;
 
 }
+
+function reverseString(string $string): string {
+
+$chars = mb_str_split($string);
+
+return implode('', array_reverse($chars));
+
+}
+
+function reverseWords(string $string): string {
+
+    $words = explode(' ', $string);
+
+    return implode(' ', array_reverse($words));
+
+}
+
+function reverseCharactersInWords(string $string): string {
+
+    $words = explode(' ', $string);
+
+    $turnWords = [];
+
+    foreach($words as $word) {
+
+        $turnWords[] = reverseString($word);
+ 
+    }
+
+    return implode(' ', $turnWords);
+}
