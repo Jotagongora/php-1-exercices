@@ -1,6 +1,8 @@
 <?php require $_SERVER['DOCUMENT_ROOT'] . '/lib/app.php';
 
-$stm = $mdbConnexion->query('SELECT * FROM employees');
+$query = isset($_GET['id']) ? "SELECT * FROM employees WHERE id={$_GET['id']}" : "SELECT * FROM employees";
+
+$stm = $mdbConnexion->query($query);
 
 $people = $stm->fetchAll(PDO::FETCH_ASSOC);
 

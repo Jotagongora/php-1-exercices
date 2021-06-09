@@ -20,7 +20,7 @@
                 <tr>
                     <td><?= $person['id']?></td>
                     <td><?= $person['name']?></td>
-                    <td><?= $person['email']?></td>
+                    <td><a href="/employees.php?id=<?= $person['id'];?>"><?= $person['email']?></td>
                     <td><?= $person['age']?></td>
                     <td><?= $person['age']?></td>
                 </tr>
