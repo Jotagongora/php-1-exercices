@@ -10,8 +10,9 @@
                 <th>Id</th>
                 <th>Nombre</th>
                 <th>Email</th>
-                <th>Age</th>
-                <th>City</th>
+                <th>Edad</th>
+                <th>Ciudad</th>
+                <th>Acción</th>
             </tr>
         </thead>
         <tbody>
@@ -22,7 +23,8 @@
                     <td><?= $person['name']?></td>
                     <td><a href="/employees.php?id=<?= $person['id'];?>"><?= $person['email']?></td>
                     <td><?= $person['age']?></td>
-                    <td><?= $person['age']?></td>
+                    <td><?= $person['city']?></td>
+                    <td><button class="employees-delete-button" value="Eliminar" data-person='<?= json_encode($person)?>'>Eliminar</button></td>
                 </tr>
                 
         <?php endforeach; ?>
