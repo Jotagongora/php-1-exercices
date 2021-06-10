@@ -4,7 +4,7 @@ require $_SERVER['DOCUMENT_ROOT'] . '/lib/app.php';
 
 $query = 'INSERT INTO `employees` (`name`, `email`, `age`, `city`) VALUES (:nombre, :correo, :edad, :ciudad);';
 
-$stm = $mdbConnexion->prepare($query);
+$stm = $mdbConnection->prepare($query);
 
 $stm->bindParam(':nombre', $_POST['name']);
 $stm->bindParam(':correo', $_POST['email']);

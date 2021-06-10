@@ -7,7 +7,7 @@ $person = json_decode($body, true);
 
 $query = 'DELETE FROM employees WHERE id= :identificador';
 
-$stm = $mdbConnexion->prepare($query);
+$stm = $mdbConnection->prepare($query);
 
 $stm-> bindParam(":identificador", $person['id']);
 

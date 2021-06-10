@@ -7,7 +7,7 @@ $query = 'SELECT * FROM employees WHERE id = :identificador';
 $query = 'SELECT * FROM employees WHERE email = :correo';
 }
 
-$stm = $mdbConnexion->prepare($query); // prepare en vez de query te protege de ataques de inyección SQL
+$stm = $mdbConnection->prepare($query); // prepare en vez de query te protege de ataques de inyección SQL
 
 if (isset($_GET['id'])) {
     $stm->bindParam(':identificador', $_GET['id']);
