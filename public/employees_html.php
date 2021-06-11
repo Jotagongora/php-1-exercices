@@ -3,6 +3,7 @@
 <?php require './head.php'; ?>
 
 <body>
+<?php include('./links.php');?>
     <?php include $_SERVER['DOCUMENT_ROOT'] . './header.php'; ?>
 
     <?php if(isset($_GET['message'])) :?>
